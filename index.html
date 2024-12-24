@@ -8,23 +8,48 @@
         body {
             margin: 0;
             font-family: Times New Roman, sans-serif;
-            background-color: #f8f8f8;
+            background-color: #3D52A0;
         }
 
+        /* Updated header styles */
         .header {
-            background-color: #ff6600;
-            padding: 20px;
+            background: linear-gradient(45deg, #3D52A0, #5F75C3); /* Gradient background */
+            padding: 20px 20px; /* Reduced padding */
             text-align: center;
             color: white;
-            font-size: 50px;
+            font-size: 35px; /* Further reduced font size */
             font-weight: bold;
+            text-transform: uppercase; /* Capitalize all letters */
+            letter-spacing: 2px; /* Reduced letter spacing */
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+            animation: slideIn 1s ease-out; /* Animation for smooth entrance */
+        }
+
+        /* Animation for smooth entrance */
+        @keyframes slideIn {
+            0% {
+                transform: translateY(-50px);
+                opacity: 0;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .header .subtext {
+            font-size: 16px; /* Further reduced subtext font size */
+            font-weight: normal;
+            margin-top: 10px;
+            font-family: 'Roboto', sans-serif;
+            opacity: 0.8;
         }
 
         .featured-product {
             position: relative;
             text-align: center;
             padding: 20px;
-            background-color: white;
+            background-color: #8498c5;
         }
 
         .image-slider {
@@ -68,7 +93,7 @@
         }
 
         .product-slider {
-            background-color: #ffa500;
+            background-color: #7091E6;
             padding: 20px 10px;
         }
 
@@ -91,7 +116,7 @@
         }
 
         .slider-container::-webkit-scrollbar-thumb {
-            background-color: #ff6600;
+            background-color: #505c7e;
             border-radius: 4px;
         }
 
@@ -148,7 +173,7 @@
             position: absolute;
             top: 10px;
             right: 10px;
-            color: white;
+            color: rgb(255, 255, 255);
             font-size: 30px;
             font-weight: bold;
             cursor: pointer;
@@ -163,7 +188,8 @@
 <body>
 
 <div class="header">
-    Happy Merry Christmas 
+    <h1>Happy Merry Christmas</h1>
+    <p class="subtext">Exclusive Offers Just for You!</p>
 </div>
 
 <div class="featured-product">
@@ -171,7 +197,7 @@
         <img src="./Images/11.jpg" alt="Featured Image 1" class="active">
         <img src="./Images/12.jpg" alt="Featured Image 2">
     </div>
-    <h2>Specail Promotions</h2>
+    <h2>Special Promotions</h2>
 </div>
 
 <div class="product-slider">
@@ -207,7 +233,7 @@
         </div>
         <div class="slider-item">
             <img src="./Images/8.jpg" alt="Product 8" onclick="openModal('./Images/8.jpg')">
-            <p>SOFT</p>
+            <p>SOFT DRINK</p>
         </div>
         <div class="slider-item">
             <img src="./Images/9.jpg" alt="Product 9" onclick="openModal('./Images/9.jpg')">
@@ -215,7 +241,7 @@
         </div>
         <div class="slider-item">
             <img src="./Images/10.jpg" alt="Product 10" onclick="openModal('./Images/10.jpg')">
-            <p>Specail offer</p>
+            <p>Special Offer</p>
         </div>
     </div>
 </div>
